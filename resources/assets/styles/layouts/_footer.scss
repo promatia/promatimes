@@ -1,0 +1,55 @@
+footer.footer {
+    background: mix(#222, $main, 80%);
+    font-size: 16px;
+    .inner-footer {
+        display: grid;
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        color: white;
+        padding: 40px 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px 30px;
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+        .brand {
+            font-size: 30px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+        }
+        p {
+            color: mix(transparent, white, 25%)
+        }
+        h2 {
+            font-size: 18px;
+            @extend .libre;
+            color: mix(transparent, white, 50%);
+        }
+    }
+    .bottom-footer {
+        padding: 13px;
+        background: mix(white, transparent, 10%)
+    }
+}
+
+.sections {
+    grid-template-columns: 1fr 1fr;
+    @extend .links;
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.links {
+    display: grid;
+    grid-gap: 8px;
+    font-size : 17px;
+    font-weight: 800;
+    @extend .libre;
+}

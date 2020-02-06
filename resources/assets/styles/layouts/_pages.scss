@@ -1,0 +1,48 @@
+.post {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid mix(white, $text, 90%);
+    margin-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    &:last-child {
+        border-bottom: 0;
+    }
+    h2 {
+        margin: 6px 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: $text;
+    }
+    .time-since {
+        @extend .libre;
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: auto;
+        color: mix(white, $text, 40%);
+    }
+    .text {
+        color: mix(white, $text, 30%);
+    }
+    .image {
+        max-width: 300px;
+        img {
+            background: #ddd;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .category-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $text;
+        font-size: 15px;
+        @extend .libre
+    }
+}

@@ -4,7 +4,8 @@
     color: white;
     font-size: 17px;
     padding: 3px;
-    font-weight: 500;
+    font-weight: 600;
+    text-decoration: none;
     @extend .libre;
     a {
         color: white;
@@ -45,7 +46,30 @@
         grid-template-areas: 'a menu menu menu menu menu menu menu menu menu menu b';
         .bottom-header-menu {
             grid-area: menu;
+            display: flex;
         }
         height: 60px;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.bottom-nav-link {
+    @extend .libre;
+    color: $text;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-flex;
+    text-transform: uppercase;
+    padding: 0 10px;
+    align-items: center;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
     }
 }

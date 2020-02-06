@@ -1,0 +1,78 @@
+.front-page {
+    padding-top: 30px;
+    height: 500px;
+    @extend .col-12;
+    grid-template-areas: "left latest latest latest latest latest latest categories categories categories categories right";
+    grid-template-rows: 1fr;
+    .latest {
+        grid-area: latest;
+        display: flex;
+        flex-direction: column;
+        box-shadow: inset 0 -20px 10px -20px rgba(0,0,0,0.1);
+    }
+    .categories {
+        grid-area: categories;
+        display: flex;
+        flex-direction: column;
+        box-shadow: inset 0 -20px 10px -20px rgba(0,0,0,0.1);
+    }
+    h1 {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.posts-container {
+    flex: 1 0 0;
+    overflow: hidden;
+    padding-right: 15px;
+}
+.os-scrollbar-track {
+    background: rgba(0,0,0,0.1) !important;
+}
+
+
+.withline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &::after {
+        border-bottom: 2px solid $text;
+        display: block;
+        content: "";
+        flex: 1;
+        margin: 0 0.5em;
+    }
+}
+
+    
+
+.hot-area {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @extend .col-12;
+    grid-template-areas: "left hot hot hot hot hot hot hot hot hot hot right";
+    .hot {
+        border-top: 1px solid mix(white, $text, 88%);
+        grid-area: hot;
+    }
+}
+
+.categories-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    .category {
+        display: flex;
+        text-decoration: none;
+        padding: 15px;
+        border-left: 4px solid $link;
+        font-weight: 600;
+        @extend .libre;
+        color: $link;
+        font-size: 1.2em;
+        background: white;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        border-radius: 4px;
+    }
+}

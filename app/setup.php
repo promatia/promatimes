@@ -7,6 +7,14 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page([
+        'page_title' => 'Website Options',
+        'menu_slug' => 'options',
+        'capability' => 'edit_posts'
+    ]);
+}
+
 /**
  * Theme assets
  */

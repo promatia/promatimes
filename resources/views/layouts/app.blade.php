@@ -4,7 +4,7 @@
   <body {!! body_class() !!}>
     {!! do_action('get_header') !!}
     @include('partials.header')
-    <div class="content">
+    <div class="page-content">
         @yield('content')
     </div>
     {!! do_action('get_footer') !!}
