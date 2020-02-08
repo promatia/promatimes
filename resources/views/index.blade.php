@@ -17,7 +17,7 @@
           </div>
           <div class="post-info">
             <h2>{{ get_the_title() }}</h2>
-            <div class="text">{{ get_the_excerpt() }}</div>
+            <div class="text">{!! wp_trim_words(strip_tags(get_the_content()), 55 ) !!}</div>
           </div>
         </div>
         @if(get_the_post_thumbnail_url())
